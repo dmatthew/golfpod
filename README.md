@@ -1,4 +1,3 @@
-golfpod
-=======
+GolfPOD
 
-GolfPOD games and drills.
+GolfPOD Games and drills.

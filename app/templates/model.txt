@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * $NAME$ Model
+ *
+ * @author Matt_Davis
+ */
+class $NAME$ extends \Eloquent {
+
+	protected $fillable = [];
+}
