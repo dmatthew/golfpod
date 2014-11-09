@@ -18,28 +18,21 @@ class GamesController extends BaseController {
      * 
      * @return Response
      */
-    public function index()
+    public function index($category = 'all')
     {   
-        $games = $this->game->paginate(12);
-        
-        return View::make('games/index', ['games' => $games, 'category' => 'all']);
-    }
-    
-    /**
-     * Display all games from the given category.
-     * 
-     * @return Response
-     */
-    public function category($category)
-    {
-        $categories = array('putting', 'chip-pitch-sand', 'driving-range', 'on-course');
-        
-        if ( ! in_array($category, $categories))
-        {
-            return Redirect::to('games');
+        if ($category === 'all') {
+            $games = $this->game->paginate(12);
         }
+        else {
+            $categories = array('putting', 'chip-pitch-sand', 'driving-range', 'on-course');
         
-        $games = $this->game->whereCategory($category)->paginate(12);
+            if ( ! in_array($category, $categories))
+            {
+                return Redirect::to('games');
+            }
+
+            $games = $this->game->whereCategory($category)->paginate(12);
+        }
         
         return View::make('games/index', ['games' => $games, 'category' => $category]);
     }
@@ -54,7 +47,7 @@ class GamesController extends BaseController {
     {
         $game = $this->game->whereSlug($slug)->first();
         
-        //Redirect to the home page if the game is does not exist.
+        //Redirect to the home page if the game does not exist.
         if ( ! $game) {
             return Redirect::to('games');
         }
