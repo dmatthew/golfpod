@@ -36,7 +36,7 @@ Route::get('about', 'AboutController@index');
 /**
  * Practice of the day Routes
  */
-Route::get('practice-of-the-day/{year}/{month}', 'PODController@index');
+Route::get('practice-of-the-day/{year?}/{month?}', 'PODController@index');
 
 /**
  * Users Routes

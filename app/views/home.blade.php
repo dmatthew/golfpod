@@ -17,10 +17,10 @@
                 </div>
                 <div class="col-sm-6 pod-content">
                     <p>{{{ $pod->getDate() }}}</p>
-                    <h1><a href="">{{{ $myGame->title }}}</a></h1>
-                    <p><span><a href="#">{{{ $myGame->category }}}</a></span><p>
-                    <p>{{{ $myGame->description }}}</p>
-                    <a class="details-btn" href="{{ URL::to('games') }}">More details</a>
+                    <h1><a href="{{{ URL::to("games/" . $pod->game->category . "/" . $pod->game->slug) }}}">{{{ $pod->game->title }}}</a></h1>
+                    <p><span><a href="{{{ URL::to("games/" . $pod->game->category) }}}">{{{ $pod->game->category }}}</a></span><p>
+                    <p>{{{ $pod->game->description }}}</p>
+                    <a class="read-more" href="{{{ URL::to("games/" . $pod->game->category . "/" . $pod->game->slug) }}}">More details</a>
                 </div>
             </div>
         </div>
@@ -33,20 +33,20 @@
         <div class="row">
             <div class="col-md-9">
                 <h3 class="section-title margin-b-20">
-                    <a href="#">News & Features</a>
+                    <a href="{{ URL::to('news') }}">News & Features</a>
                 </h3>
                 <div class="row">
                     @foreach($posts as $post)
                     <div class="col-md-6 col-lg-4 post">
                         <div class="thumbnail">
-                            <a href="#">
+                            <a href="{{ URL::to("posts/$post->slug") }}">
                                 <img src="{{ asset('img/stock01.jpg') }}" alt="" title="" />
                             </a>
                             <div class="caption">
                                 <p class="post-date">{{{ $post->getDate() }}}</p>
-                                <h3><a href="#">{{{ $post->title }}}</a></h3>
+                                <h3><a href="{{ URL::to("$post->slug") }}">{{{ $post->title }}}</a></h3>
                                 <p>{{{ $post->excerpt }}}</p>
-                                <a class="read-more" href="#">read more &#8680;</a>
+                                <a class="read-more" href="{{ URL::to("posts/$post->slug") }}">read more &#8680;</a>
                             </div>
                         </div>
                     </div>
