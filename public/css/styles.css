@@ -30,6 +30,24 @@ p > a, a:hover {
 .message {
     color: #f00;
 }
+.btn-primary {
+    background-color: #515A69;
+}
+.btn-success {
+    background-color: #50BE46;
+}
+.text-primary {
+   color: #515A69;
+}
+.text-success {
+    color: #50BE46;
+}
+.navbar-primary {
+   background-color: #515A69;
+}
+.navbar-success {
+    background-color: #50BE46;
+}
 .btn-submit {
     background-color: rgb(80, 190, 70);
     color: #fff;
@@ -104,7 +122,6 @@ hr {
     padding-right: 15px;
 }
 .navbar {
-    background: inherit;
     border: none;
     margin-bottom: 0px;
 }
@@ -119,17 +136,18 @@ hr {
     font-size: 16px;
     text-transform: uppercase;
 }
-.navbar-default .navbar-nav > .active > a {
+.navbar-success .navbar-nav > .active > a {
     background-color: transparent;
     color: #333;
 }
-.navbar-default .navbar-nav > .active > a:hover {
+.navbar-success .navbar-nav > .active > a:hover {
     background-color: transparent;
 }
-.navbar-default .navbar-nav > li > a {
+.navbar-success .navbar-nav > li > a {
     color: #fff;
 }
-.navbar-default .navbar-nav > li > a:hover {
+.navbar-success .navbar-nav > li > a:hover {
+    color: #333;
     text-decoration: underline;
 }
 .dropdown:hover {

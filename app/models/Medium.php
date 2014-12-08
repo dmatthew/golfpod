@@ -13,4 +13,9 @@ class Medium extends \Eloquent {
     {
         return $this->belongsToMany('Game');
     }
+    
+    public function posts()
+    {
+        return $this->belongsToMany('Post', 'post_medium');
+    }
 }

@@ -17,6 +17,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         
         public static $rules = array(
             'username' => 'required',
+            'email' => 'required',
             'password' => 'required'
         );
         
@@ -36,32 +37,38 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 	protected $hidden = array('password', 'remember_token');
         
-        public function isValid()
+    public function isValid()
+    {
+        $validation = Validator::make($this->attributes, static::$rules);
+
+        if ($validation->passes())
         {
-            $validation = Validator::make($this->attributes, static::$rules);
-            
-            if ($validation->passes())
-            {
-                return true;
-            }
-            
-            $this->errors = $validation->messages();
-            return false;
-        }
-        
-        public function getRememberToken()
-        {
-            return $this->remember_token;
+            return true;
         }
 
-        public function setRememberToken($value)
-        {
-            $this->remember_token = $value;
-        }
+        $this->errors = $validation->messages();
+        return false;
+    }
 
-        public function getRememberTokenName()
-        {
-            return 'remember_token';
-        }
+    public function getRememberToken()
+    {
+        return $this->remember_token;
+    }
+
+    public function setRememberToken($value)
+    {
+        $this->remember_token = $value;
+    }
+
+    public function getRememberTokenName()
+    {
+        return 'remember_token';
+    }
+    
+    
+    public function isAdmin()
+    {
+        return $this->role === 'admin';
+    }
 
 }

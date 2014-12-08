@@ -6,6 +6,9 @@
 |--------------------------------------------------------------------------
 */
 
+/**
+ * Route constraint patterns.
+ */
 Route::pattern('game', '[a-z0-9-]+');
 Route::pattern('category', '[a-z0-9-]+');
 Route::pattern('post', '[a-z0-9-]+');
@@ -39,20 +42,30 @@ Route::get('about', 'AboutController@index');
 Route::get('practice-of-the-day/{year?}/{month?}', 'PODController@index');
 
 /**
+ * Admin Routes
+ */
+Route::group(array('prefix' => 'admin', 'before' => ['auth', 'auth.admin'], 'namespace' => 'Admin'), function () {
+    Route::get('/', ['as' => 'dashboard', 'uses' => 'AdminController@index']);
+    Route::resource('users', 'UsersController');
+    Route::resource('games', 'GamesController');
+    Route::resource('pods', 'PODController');
+    Route::resource('posts', 'PostsController');
+});
+
+/**
  * Users Routes
  */
 Route::resource('users', 'UsersController');
-//Route::get('users', 'UsersController@index');
-//
-//Route::get('users/{username}', 'UsersController@show');
 
 /**
  * Sessions Routes
  */
-Route::get('login', 'SessionsController@create');
-Route::get('logout', 'SessionsController@destroy');
-Route::resource('sessions', 'SessionsController');
+Route::get('login', ['as' => 'getLogin', 'uses' => 'SessionsController@create']);
+Route::post('login', ['as' => 'postLogin', 'uses' => 'SessionsController@store']);
+Route::get('logout', ['as' => 'getLogout', 'uses' => 'SessionsController@destroy']);
 
-Route::get('admin', function () {
-    return 'Admin Page';
-})->before('auth');
+/**
+ * Registration Routes
+ */
+Route::get('register', ['as' => 'getRegister', 'uses' => 'RegistrationController@create']);
+Route::post('register', ['as' => 'postRegister', 'uses' => 'RegistrationController@store']);

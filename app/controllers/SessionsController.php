@@ -1,6 +1,17 @@
 <?php
 
 class SessionsController extends BaseController {
+    
+    protected $user;
+    
+    /**
+     * 
+     * @param User $user
+     */
+    public function __construct(User $user)
+    {
+        $this->user = $user;
+    }
 
     /**
      * Show the login form.
@@ -11,14 +22,14 @@ class SessionsController extends BaseController {
     {
         if (Auth::check())
         {
-            return Redirect::to('/admin');
+            return Redirect::to('admin');
         }
         return View::make('sessions/create');
     }
 
 
     /**
-     * Store a newly created resource in storage.
+     * Login a user.
      *
      * @return Response
      */
@@ -29,24 +40,23 @@ class SessionsController extends BaseController {
         
         if (Auth::attempt($credentials, $remember))
         {
-            return "Welcome " .  Auth::user()->username;
+            return Redirect::intended('dashboard');
         }
         
-        return Redirect::back()->withInput();
+        return Redirect::back()->with('login_errors', 'That username/password combination does not exist.');
     }
 
 
     /**
-     * Remove the specified resource from storage.
+     * Logout a user.
      *
-     * @param  int  $id
      * @return Response
      */
     public function destroy()
     {
         Auth::logout();
         
-        return Redirect::route('sessions.create');
+        return Redirect::route('getLogin');
     }
 
 

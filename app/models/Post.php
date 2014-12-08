@@ -11,7 +11,7 @@ class Post extends Eloquent {
     
     public function media()
     {
-        return $this->belongsToMany('Medium');
+        return $this->belongsToMany('Medium', 'post_medium');
     }
     
     /**

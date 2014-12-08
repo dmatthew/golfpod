@@ -13,7 +13,7 @@
             @foreach($posts as $post)
                 <div class="row blog-row">
                     <div class="col-md-4">
-                        <img class="img-responsive" alt="" src="">
+                        <img class="img-responsive" alt="{{{ $post->media()->first()->label }}}" src="{{{ asset('img/'.$post->media()->first()->path) }}}">
                     </div>
                     <div class="col-md-8">
 						<h2><a href="{{ URL::to("news/$post->slug") }}" >{{{ $post->title }}}</a></h2>
@@ -26,7 +26,7 @@
             
                 <!-- PAGINATION -->
                 <div class="pagination-center">
-                {{ $posts->links() }}
+                    {{{ $posts->links() }}}
                 </div>
                 <!-- END PAGINATION -->
             </div>

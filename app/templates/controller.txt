@@ -10,7 +10,7 @@ class $NAME$ extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		// Code go here!
 	}
 
 	/**
@@ -21,7 +21,7 @@ class $NAME$ extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		// Code go here!
 	}
 
 	/**
@@ -32,7 +32,7 @@ class $NAME$ extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		// Code go here!
 	}
 
 	/**
@@ -44,7 +44,7 @@ class $NAME$ extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		// Code go here!
 	}
 
 	/**
@@ -56,7 +56,7 @@ class $NAME$ extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		// Code go here!
 	}
 
 	/**
@@ -68,7 +68,7 @@ class $NAME$ extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		// Code go here!
 	}
 
 	/**
@@ -80,7 +80,7 @@ class $NAME$ extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		// Code go here!
 	}
 
 }

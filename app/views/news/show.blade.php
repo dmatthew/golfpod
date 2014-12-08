@@ -11,8 +11,7 @@
                     <h1 class="blog-post-title">{{{ $post->title }}}</h1>
                     <p class="blog-date">{{{ $post->getDate() }}}</p>
                     <p class="lead blog-description">{{{ $post->excerpt }}}</p>
-                    <img class="img-responsive blog-img" src="" alt="">
-
+                    <img class="img-responsive blog-img" src="{{{ asset('img/'.$post->media()->first()->path) }}}" alt="{{{ $post->media()->first()->label }}}">
                     <p>{{{ $post->content }}}</p>
                 </div>
             </div>

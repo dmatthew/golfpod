@@ -1,4 +1,4 @@
-/bootstrap/compiled.php
+/bootstrap/*
 /vendor
 composer.phar
 composer.lock
@@ -9,6 +9,8 @@ server.php
 Thumbs.db
 nbproject
 /app/config/*
+/app/database/seeds/*
+/app/database/migrations/*
 /app/lang/*
 /app/start/*
 /app/storage/*
