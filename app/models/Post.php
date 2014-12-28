@@ -7,7 +7,28 @@
  */
 class Post extends Eloquent {
     
-    protected $fillable = ['content', 'title', 'excerpt', 'slug'];
+    protected $fillable = ['content', 'title', 'excerpt', 'published_date', 'slug'];
+    
+    public static $rules = array(
+        'title' => 'required',
+        'published_date' => 'required',
+        'content' => 'required'
+    );
+    
+    public $errors;
+    
+    public function isValid()
+    {
+        $validation = Validator::make($this->attributes, static::$rules);
+
+        if ($validation->passes())
+        {
+            return true;
+        }
+
+        $this->errors = $validation->messages();
+        return false;
+    }
     
     public function media()
     {

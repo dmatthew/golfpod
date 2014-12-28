@@ -28,8 +28,8 @@ Route::get('games/{category}/{game}', 'GamesController@show');
 /**
  * News Routes
  */
-Route::get('news', 'PostsController@index');
-Route::get('news/{post}', 'PostsController@show');
+Route::get('posts', 'PostsController@index');
+Route::get('posts/{post}', 'PostsController@show');
 
 /**
  * About Route
@@ -44,7 +44,7 @@ Route::get('practice-of-the-day/{year?}/{month?}', 'PODController@index');
 /**
  * Admin Routes
  */
-Route::group(array('prefix' => 'admin', 'before' => ['auth', 'auth.admin'], 'namespace' => 'Admin'), function () {
+Route::group(array('prefix' => 'gp', 'before' => ['auth', 'auth.admin'], 'namespace' => 'Admin'), function () {
     Route::get('/', ['as' => 'dashboard', 'uses' => 'AdminController@index']);
     Route::resource('users', 'UsersController');
     Route::resource('games', 'GamesController');

@@ -1,6 +1,8 @@
 <?php namespace Admin;
 
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Redirect;
 use Game;
 
 class GamesController extends \BaseController {
@@ -26,7 +28,7 @@ class GamesController extends \BaseController {
 		// Get a list of games.
         $games = $this->game->paginate(30);
         
-        return View::make('admin/games', ['games' => $games]);
+        return View::make('admin/games/index', ['games' => $games]);
 	}
 
 
@@ -37,7 +39,8 @@ class GamesController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		//Show the form for creating/updating a game.
+        return View::make('admin/games/create');
 	}
 
 
@@ -48,7 +51,20 @@ class GamesController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		$input = Input::all();
+        
+        if ( ! $this->game->fill($input)->isValid())
+        {
+            return Redirect::back()->withInput()->withErrors($this->game->errors);
+        }
+        
+        $game = new Game;
+        $game->title = Input::get('title');
+        $game->description = Input::get('description');
+        $game->excerpt = Input::get('excerpt');
+        $game->save();
+        
+        return Redirect::to('gp/games');
 	}
 
 
@@ -72,7 +88,9 @@ class GamesController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$game = $this->game->find($id);
+        
+        return View::make('admin/games/edit', ['game' => $game]);
 	}
 
 
@@ -84,7 +102,20 @@ class GamesController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$input = Input::all();
+        $game = $this->game->find($id);
+        
+        if ( ! $game->fill($input)->isValid())
+        {
+            return Redirect::back()->withInput()->withErrors($game->errors);
+        }
+        
+        $game->title = Input::get('title');
+        $game->excerpt = Input::get('excerpt');
+        $game->description = Input::get('description');
+        $game->save();
+        
+        return Redirect::to('gp/games');
 	}
 
 
@@ -96,7 +127,10 @@ class GamesController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$game = $this->game->find($id);
+        $game->delete();
+        
+        return Redirect::to('gp/games');
 	}
 
 

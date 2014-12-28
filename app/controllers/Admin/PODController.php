@@ -1,6 +1,8 @@
 <?php namespace Admin;
 
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Redirect;
 use Pod;
 
 class PODController extends \BaseController {
@@ -26,7 +28,7 @@ class PODController extends \BaseController {
 		// Get a list of pods.
         $pods = $this->pod->paginate(30);
         
-        return View::make('admin/pods', ['pods' => $pods]);
+        return View::make('admin/pods/index', ['pods' => $pods]);
 	}
 
 
@@ -37,7 +39,8 @@ class PODController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		//Show the form for creating/updating a pod.
+        return View::make('admin/pods/create');
 	}
 
 
@@ -48,7 +51,19 @@ class PODController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		$input = Input::all();
+        
+        if ( ! $this->pod->fill($input)->isValid())
+        {
+            return Redirect::back()->withInput()->withErrors($this->pod->errors);
+        }
+        
+        $pod = new Pod;
+        $pod->game_id = Input::get('game_id');
+        $pod->pod_date = Input::get('pod_date');
+        $pod->save();
+        
+        return Redirect::to('gp/pods');
 	}
 
 
@@ -72,7 +87,9 @@ class PODController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$pod = $this->pod->find($id);
+        
+        return View::make('admin/pods/edit', ['pod' => $pod]);
 	}
 
 
@@ -84,7 +101,19 @@ class PODController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$input = Input::all();
+        $pod = $this->pod->find($id);
+        
+        if ( ! $pod->fill($input)->isValid())
+        {
+            return Redirect::back()->withInput()->withErrors($pod->errors);
+        }
+        
+        $pod->game_id = Input::get('game_id');
+        $pod->pod_date = Input::get('pod_date');
+        $pod->save();
+        
+        return Redirect::to('gp/pods');
 	}
 
 
@@ -96,7 +125,10 @@ class PODController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$pod = $this->pod->find($id);
+        $pod->delete();
+        
+        return Redirect::to('gp/pods');
 	}
 
 

@@ -11,7 +11,27 @@ class Pod extends Eloquent {
     
     public $timestamps = false;
     
-    protected $fillable = ['pod_game', 'pod_date'];
+    protected $fillable = ['game_id', 'pod_date'];
+    
+     public static $rules = array(
+        'pod_date' => 'required',
+        'game_id' => 'required'
+    );
+    
+    public $errors;
+    
+    public function isValid()
+    {
+        $validation = Validator::make($this->attributes, static::$rules);
+
+        if ($validation->passes())
+        {
+            return true;
+        }
+
+        $this->errors = $validation->messages();
+        return false;
+    }
     
     public function game()
     {

@@ -1,20 +1,37 @@
 @extends('layouts/admin')
-@section('title', '')
+@section('title', 'Dashboard')
 @section('description', '')
 
 @section('content')
-<!-- TOP ROW -->
-<div class="row">
-    
+<div class="page-header">
+    <h1>Manage</h1>
 </div>
-
-<!-- BOTTOM ROW -->
-<div class="row">
-    <div class="col-lg-6">
-        @include('admin.partials.new_game')
+<div class="keystone-lists">
+    <div class="nav-section">
+        <h4>Pods</h4>
+        <ul>
+            <li><a href="{{ URL::to('gp/pods') }}">Pods</a></li>
+        </ul>
     </div>
-    <div class="col-lg-6">
-        @include('admin.partials.new_post')
+    <div class="nav-section">
+        <h4>Games</h4>
+        <ul>
+            <li><a href="{{ URL::to('gp/games') }}">Games</a></li>
+            <li><a href="{{ URL::to('gp/game-categories') }}">Game Categories</a></li>
+        </ul>
+    </div>
+    <div class="nav-section">
+        <h4>Posts</h4>
+        <ul>
+            <li><a href="{{ URL::to('gp/posts') }}">Posts</a></li>
+            <li><a href="{{ URL::to('gp/post-categories') }}">Post Categories</a></li>
+        </ul>
+    </div>
+    <div class="nav-section">
+        <h4>Users</h4>
+        <ul>
+            <li><a href="{{ URL::to('gp/users') }}">Users</a></li>
+        </ul>
     </div>
 </div>
 @stop

@@ -9,6 +9,9 @@ body {
     color: #5A5A5A;
     font-family: "Open Sans", arial, sans-serif;
 }
+.main {
+    margin-top: 20px;
+}
 li {
     list-style-type: none;
 }
@@ -32,9 +35,11 @@ p > a, a:hover {
 }
 .btn-primary {
     background-color: #515A69;
+    border-color: #444C5A;
 }
 .btn-success {
     background-color: #50BE46;
+    border-color: #47AB3E;
 }
 .text-primary {
    color: #515A69;
@@ -71,6 +76,11 @@ hr {
 /* Objects that need to be centered */
 .container-video, .nav-pills-center, .pagination-center {
     text-align: center;
+}
+
+/** Forms **/
+form.inline-form {
+    display: inline;
 }
 
 
@@ -374,47 +384,38 @@ ul.nav li.dropdown:hover .dropdown-menu {
 }
 
 
-/* Admin Dashboard */
-#dashboard .navbar {
+/* Admin */
+#admin .navbar {
     background-color: #515a69;
 }
-#dashboard .navbar-brand {
+#admin .navbar-brand {
     color: #fff;
 }
-#dashboard .navbar-brand:hover {
+#admin .navbar-brand:hover {
     color: #fff;
     text-decoration: underline;
 }
-#dashboard .nav-sidebar > .active > a {
+#admin .navbar-nav > .active > a {
     background-color: rgb(80, 190, 70);
 }
-#dashboard .navbar-nav > li > a {
-    background-color: #eee;
-    color: #515a69;
+#admin .navbar-nav > li > a {
+    color: #FFF;
 }
-#dashboard .nav > li > a:hover, #dashboard > li > a:focus {
+#admin .nav > li > a:hover, #admin > li > a:focus {
     background-color: rgb(80, 190, 70);
     color: #fff;
 }
-#dashboard .form-control:focus {
+#admin .form-control:focus {
     border-color: #515a69;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(81, 92, 105, 0.6);
 }
-#dashboard .btn {
-    background-color: rgb(80, 190, 70);
-    border-color: rgb(80, 190, 70);
-}
-#dashboard .btn:focus , #dashboard .btn:hover {
-    background-color: #515a69;
-    border-color: #515a69;
-}
-#dashboard .form-control-lg {
+#admin .form-control-lg {
     min-height: 200px;
 }
 
 
 /* Login Page */
-#login-page, #dashboard {
+#login-page, #admin {
     background: url(../img/course-wash.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;

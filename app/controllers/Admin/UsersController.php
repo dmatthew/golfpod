@@ -1,6 +1,9 @@
 <?php namespace Admin;
 
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Redirect;
 use User;
 
 class UsersController extends \BaseController {
@@ -26,7 +29,7 @@ class UsersController extends \BaseController {
 		// Get a list of users.
         $users = $this->user->paginate(30);
         
-        return View::make('admin/users', ['users' => $users]);
+        return View::make('admin/users/index', ['users' => $users]);
 	}
 
 
@@ -37,7 +40,8 @@ class UsersController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		//Show the form for creating/updating a user.
+        return View::make('admin/users/create');
 	}
 
 
@@ -48,7 +52,20 @@ class UsersController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		$input = Input::all();
+        
+        if ( ! $this->user->fill($input)->isValid())
+        {
+            return Redirect::back()->withInput()->withErrors($this->user->errors);
+        }
+        
+        $user = new User;
+        $user->username = Input::get('username');
+        $user->email = Input::get('email');
+        $user->password = Hash::make(Input::get('password'));
+        $user->save();
+        
+        return Redirect::to('gp/users');
 	}
 
 
@@ -72,7 +89,9 @@ class UsersController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$user = $this->user->find($id);
+        
+        return View::make('admin/users/edit', ['user' => $user]);
 	}
 
 
@@ -84,7 +103,19 @@ class UsersController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$input = Input::all();
+        $user = $this->user->find($id);
+        
+        if ( ! $user->fill($input)->isValid())
+        {
+            return Redirect::back()->withInput()->withErrors($user->errors);
+        }
+        
+        $user->username = Input::get('username');
+        $user->email = Input::get('email');
+        $user->save();
+        
+        return Redirect::to('gp/users');
 	}
 
 
@@ -96,7 +127,10 @@ class UsersController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$user = $this->user->find($id);
+        $user->delete();
+        
+        return Redirect::to('gp/users');
 	}
 
 
