@@ -41,9 +41,8 @@
     
     <!-- GAMES GALLERY -->
     <div class="container">
-        @foreach(array_chunk($games->all(), 4) as $row)
         <div class="row">
-            @foreach($row as $game)
+            @foreach($games as $game)
             <div class="col-md-3">
                 <a href="{{ URL::to("games/$game->category/$game->slug") }}">
                     <img src="{{{ asset('img/'.$game->media()->first()->path) }}}" alt="{{{ $game->title }}}" class="img-responsive">
@@ -53,7 +52,6 @@
             </div>
             @endforeach
         </div>
-        @endforeach
         
         <!-- PAGINATION -->
         <div class="pagination-center">

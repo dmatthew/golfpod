@@ -27,8 +27,12 @@
 
     <!-- GAME DESCRIPTION -->
     <div class="container marketing">
-        <h2 id="how-to-play" class="section-heading">How to Play</h2>
-        <p>{{{ $game->description }}}</p>
+        <div class="col-xs-12">
+            <h2 id="how-to-play" class="section-heading">How to Play</h2>
+        </div>
+        <div class="col-xs-12">
+            <p>{{{ $game->description }}}</p>
+        </div>
     </div>
     <!-- END GAME DESCRIPTION -->
 

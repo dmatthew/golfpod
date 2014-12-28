@@ -22,12 +22,11 @@
         <!-- Custom styles for this template -->
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css" media="all">
         <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
         <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.2/css/font-awesome.min.css" rel="stylesheet">
     </head>
-    <body id="dashboard">
+    <body id="admin">
         <!-- TOP NAVIGATION -->
-        <div class="navbar navbar-primary navbar-fixed-top" role="navigation">
+        <div class="navbar navbar-primary navbar-static-top" role="navigation">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -47,45 +46,35 @@
 						</li>
 						<li><a href="{{ URL::to('logout') }}"><span class="glyphicon glyphicon-lock"></span> Logout</a></li>
 					</ul>
+                    <ul class="nav navbar-nav">
+						<li{{ (Request::is('gp') ? ' class="active"' : '') }}>
+                            {{ link_to_route('dashboard', 'Dashboard') }}
+                        </li>
+                        <li{{ (Request::is('gp/pods') ? ' class="active"' : '') }}>
+                            <a href="{{ URL::to('gp/pods') }}">PODs</a>
+                        </li>
+						<li{{ (Request::is('gp/games') ? ' class="active"' : '') }}>
+                            <a href="{{ URL::to('gp/games') }}">Games</a>
+                        </li>
+						<li{{ (Request::is('gp/posts') ? ' class="active"' : '') }}>
+                            <a href="{{ URL::to('gp/posts') }}">Posts</a>
+                        </li>
+                        <li{{ (Request::is('gp/users') ? ' class="active"' : '') }}>
+                            <a href="{{ URL::to('gp/users') }}">Users</a>
+                        </li>
+					</ul>
 				</div>
 			</div>
 		</div>
         <!-- END TOP NAVIGATION -->
         
-        <!-- LEFT NAVIGATION -->
-        <div class="container-fluid">
-			<div class="row">
-				<div class="col-sm-3 col-md-2 sidebar">
-					<ul class="nav nav-sidebar">
-						<li{{ (Request::is('admin') ? ' class="active"' : '') }}>
-                            {{ link_to_route('dashboard', 'Dashboard') }}
-                        </li>
-                        <li{{ (Request::is('admin/pods') ? ' class="active"' : '') }}>
-                            <a href="{{ URL::to('admin/pods') }}">PODs</a>
-                        </li>
-						<li{{ (Request::is('admin/games') ? ' class="active"' : '') }}>
-                            <a href="{{ URL::to('admin/games') }}">Games</a>
-                        </li>
-						<li{{ (Request::is('admin/posts') ? ' class="active"' : '') }}>
-                            <a href="{{ URL::to('admin/posts') }}">Posts</a>
-                        </li>
-                        <li{{ (Request::is('admin/users') ? ' class="active"' : '') }}>
-                            <a href="{{ URL::to('admin/users') }}">Users</a>
-                        </li>
-					</ul>
-				</div><!-- /.sidebar -->
-				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-					<h1>@yield('page_header')</h1>
-				</div>
-			</div>
-		</div>
-        <!-- END LEFT NAVIGATION -->
-
+        
         <!-- MAIN CONTENT -->
-        <div class='col-md-10 col-md-offset-2'>
+        <div class="main container-fluid">
             @yield('content')
         </div>
         <!-- END MAIN CONTENT -->
+        
         
         <!-- SCRIPTS -->
         <script src="{{ asset('js/jquery-1.11.1.min.js') }}"></script>

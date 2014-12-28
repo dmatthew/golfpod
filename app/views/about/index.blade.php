@@ -13,15 +13,17 @@
     <div class="container marketing">
         
         <!-- WELCOME MESSAGE -->
-        <h3>Welcome!</h3>
-        <p>Hello and thank you for visiting GolfPOD. If you are new to GolfPOD then we would like to say welcome and we hope you enjoy the site. If you are a returning friend and just wanted to learn more about the site and the people behind it then welcome back.</p>
-        <p>GolfPOD is home to the Golf Practice of the Day, the extra special golfing game or drill that will help you improve your game and lead to new friends in the process. The practice of the day is posted to our homepage everyday and you can rest assured that it will never be a repeat from the day before. Each day we post something different in order to bring a new challenge to your game as well as to keep things interesting. The madness behind it all is simple, to get you to think beyond swing thoughts. No more worrying about elbow positions, shoulder plane, or anything else that takes your mind off of the task at hand, which is to get the ball in the cup. Golf is a very simple game, but at times can seem maddeningly frustrating. GolfPOD brings the fun back to practice. We provide a game for you to play each and every day – yes that’s 365 days a year, even holidays – that you can play alone, against a friend, or as part of your Saturday morning group.</p>
-        <p>The games found here at GolfPOD can help you in all parts of your game. Need a new format for your next foursome? We can help with that. How about a little added excitement to your next bout around the chipping green? We’ve got games that can help turn you into a short game ninja. Looking for a way to get your child more interested in golf? We’re sure that we can make their next day at the course an enjoyable one. With a list of games and drills too long to count we are sure you can find something new for you next round or day at the range.</p>
+        <div class="col-xs-12">
+            <h3>Welcome!</h3>
+            <p>Hello and thank you for visiting GolfPOD. If you are new to GolfPOD then we would like to say welcome and we hope you enjoy the site. If you are a returning friend and just wanted to learn more about the site and the people behind it then welcome back.</p>
+            <p>GolfPOD is home to the Golf Practice of the Day, the extra special golfing game or drill that will help you improve your game and lead to new friends in the process. The practice of the day is posted to our homepage everyday and you can rest assured that it will never be a repeat from the day before. Each day we post something different in order to bring a new challenge to your game as well as to keep things interesting. The madness behind it all is simple, to get you to think beyond swing thoughts. No more worrying about elbow positions, shoulder plane, or anything else that takes your mind off of the task at hand, which is to get the ball in the cup. Golf is a very simple game, but at times can seem maddeningly frustrating. GolfPOD brings the fun back to practice. We provide a game for you to play each and every day – yes that’s 365 days a year, even holidays – that you can play alone, against a friend, or as part of your Saturday morning group.</p>
+            <p>The games found here at GolfPOD can help you in all parts of your game. Need a new format for your next foursome? We can help with that. How about a little added excitement to your next bout around the chipping green? We’ve got games that can help turn you into a short game ninja. Looking for a way to get your child more interested in golf? We’re sure that we can make their next day at the course an enjoyable one. With a list of games and drills too long to count we are sure you can find something new for you next round or day at the range.</p>
+        </div>
         <!-- END WELCOME MESSAGE -->
         
-        <!-- MEET OUR TEAM -->
         <hr class="featurette-divider">
         
+        <!-- MEET OUR TEAM -->
         <h2 class="section-heading">Meet our Team</h2>
         <div class="row featurette">
             <div class="col-md-7">

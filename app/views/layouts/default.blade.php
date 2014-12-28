@@ -26,11 +26,11 @@
     </head>
     <body>
         <!-- HEADER -->
-        <div class="page-header">
+        <div class="page-header visible-lg-block">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-4">
-                        <h1><a href="{{ URL::to('/') }}" title="GolfPOD">GolfPOD<img src="{{ asset('img/golfball.png') }}" alt="" class="logo-ball"/></a></h1>
+                        <h1><a href="{{ URL::to('/') }}" title="GolfPOD"><img src="{{ asset('img/golfpod-logo-150.png') }}" alt="GolfPOD" class="img-responsive"/></a></h1>
                     </div>
                 </div>
             </div>

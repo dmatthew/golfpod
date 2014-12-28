@@ -27,7 +27,7 @@
                           </ul>
                         </li>
                         <li{{ (Request::is('news') ? ' class="active"' : '') }}>
-                            <a href="{{ URL::to('news') }}">News</a>
+                            <a href="{{ URL::to('posts') }}">Blog</a>
                         </li>
                         <li{{ (Request::is('about') ? ' class="active"' : '') }}>
                             <a href="{{ URL::to('about') }}">About</a>
