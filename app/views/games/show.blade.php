@@ -11,11 +11,8 @@
     
     
     <!-- GAME VIDEO -->
-    <div class="container container-video">
-        <video width="800" controls>
-            <source src="" type="video/mp4">
-            Your browser does not support video.
-        </video>
+    <div class="container container-video embed-youtube">
+        <iframe width="560" height="315" src="http://www.youtube.com/embed/{{{ $game->youtube_id }}}?rel=0" frameborder="0" allowfullscreen></iframe>
     </div>
     <!-- END GAME VIDEO -->
     
@@ -45,7 +42,9 @@
         <h2 class="section-heading">Similar Games</h2>
         @foreach($similarGames as $similarGame)
         <div class="col-lg-4">
-            <img class="img-rounded" style="width: 140px; height: 140px;" src="{{{ asset('img/'.$similarGame->media()->first()->path) }}}" alt="{{{ $similarGame->title }}}">
+            <a href="{{ URL::to("games/$similarGame->category/$similarGame->slug") }}">
+                <img class="img-rounded img-responsive" style="margin:auto;" src="http://img.youtube.com/vi/{{{ $similarGame->youtube_id }}}/mqdefault.jpg" alt="{{{ $similarGame->title }}}">
+            </a>
             <h4>{{{ $similarGame->title }}}</h4>
             <p>{{{ $similarGame->excerpt }}}</p>
             <p><a class="btn read-more" role="button" href="{{ URL::to("games/$similarGame->category/$similarGame->slug") }}">View game</a></p>

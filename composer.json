@@ -4,7 +4,8 @@
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"require": {
-		"laravel/framework": "4.2.*"
+		"laravel/framework": "4.2.*",
+        "cloudinary/cloudinary_php": "dev-master"
 	},
     "require-dev": {
 		"way/generators": "~2.0",

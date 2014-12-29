@@ -10,9 +10,9 @@
                 <div class="col-sm-6">
                     <h2 class="heading"><a href="{{ URL::to('practice-of-the-day') }}">Practice of the day</a></h2>
                     <div class="thumbnail">
-                        <a href="#">
-                            <img src="{{ asset('img/stock02.jpg') }}" alt="" title="" />
-                        </a>
+                        <div class="container-video embed-youtube">
+                            <iframe width="560" height="315" src="http://www.youtube.com/embed/{{{ $pod->game->youtube_id }}}?rel=0" frameborder="0" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-6 pod-content">
@@ -33,7 +33,7 @@
         <div class="row">
             <div class="col-md-9">
                 <h3 class="section-title margin-b-20">
-                    <a href="{{ URL::to('news') }}">News & Features</a>
+                    <a href="{{ URL::to('posts') }}">News & Features</a>
                 </h3>
                 <div class="row">
                     @foreach($posts as $post)

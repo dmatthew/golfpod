@@ -42,10 +42,10 @@
     <!-- GAMES GALLERY -->
     <div class="container">
         <div class="row">
-            @foreach($games as $game)
+            @foreach($games as $key=>$game)
             <div class="col-md-3">
                 <a href="{{ URL::to("games/$game->category/$game->slug") }}">
-                    <img src="{{{ asset('img/'.$game->media()->first()->path) }}}" alt="{{{ $game->title }}}" class="img-responsive">
+                    <img src="http://img.youtube.com/vi/{{{ $game->youtube_id }}}/mqdefault.jpg" alt="{{{ $game->title }}}" class="img-responsive">
                     <h2>{{{ $game->title }}}</h2>
                     <p>{{{ $game->category }}}</p>
                 </a>

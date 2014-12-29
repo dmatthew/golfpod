@@ -7,12 +7,13 @@
  */
 class Game extends Eloquent {
     
-    protected $fillable = ['title', 'category', 'description', 'excerpt', 'slug'];
+    protected $fillable = ['title', 'category', 'description', 'youtube_id', 'excerpt', 'slug'];
     
     public static $rules = array(
         'title' => 'required',
         'category' => 'required',
-        'description' => 'required'
+        'description' => 'required',
+        'youtube_id' => 'required'
     );
     
     public $errors;

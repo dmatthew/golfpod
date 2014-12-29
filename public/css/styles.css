@@ -139,6 +139,24 @@ form.inline-form {
     padding-left: 0px;
     padding-right: 0px;
 }
+.navbar-toggle {
+    background-color: #007700;
+    padding: 10px 18px;
+    margin: 0px -15px 0px 0px;
+    border-radius: 0px;
+}
+.navbar-toggle .glyphicon {
+    color: #fff;
+    font-size: 24px;
+}
+.navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+.navbar-brand:hover, .navbar-brand:focus {
+    color: #fff;
+}
 .navbar-nav {
     margin: 0px;
 }
@@ -157,12 +175,13 @@ form.inline-form {
     color: #fff;
 }
 .navbar-success .navbar-nav > li > a:hover {
-    color: #333;
+    background-color: #007700;
+    color: #fff;
     text-decoration: underline;
 }
-.dropdown:hover {
-    background-color: #e7e7e7;
-    color: #777;
+.navbar-success .dropdown:hover {
+    background-color: #007700;
+    color: #000;
 }
 ul.nav li.dropdown:hover .dropdown-menu {
     display: block;
@@ -180,12 +199,16 @@ ul.nav li.dropdown:hover .dropdown-menu {
     background-size: cover;
     box-shadow: 0px 2px 5px #bbb;
 }
+.pod-row .thumbnail {
+    background-color: #50BE46;
+}
 .heading {
     margin-top: 10px;
 }
 .pod-content {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.6);
     margin-top: 53px;
+    margin-bottom: 20px;
     padding-bottom: 15px;
 }
 .pod-content h1 {
@@ -318,6 +341,9 @@ ul.nav li.dropdown:hover .dropdown-menu {
 /* Game Description Pages */
 .container video {
     width: 75%;
+}
+.embed-youtube iframe {
+    max-width: 100%;
 }
 
 

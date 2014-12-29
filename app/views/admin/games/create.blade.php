@@ -9,7 +9,7 @@
     {{ Form::open(['url' => 'gp/games', 'name' => 'newGameForm']) }}
         <div class="form-group">
             <label class="control-label">Title *</label>
-            <input type="text" name="title" class="form-control" placeholder="Enter Title" required>
+            <input type="text" name="title" class="form-control" placeholder="Title" required>
         </div>
 
         <div class="form-group">
@@ -25,9 +25,9 @@
         </div>
 
         <div class="form-group">
-            <label>Video *</label>
+            <label>YouTube Id *</label>
             <div class="controls">
-                <input name="video" class="form-control" placeholder="Enter path to video" type="text" required>
+                <input name="youtube_id" class="form-control" placeholder="YouTube video id" type="text" required>
             </div>
         </div>
 

@@ -9,7 +9,7 @@
     {{ Form::open(['url' => 'gp/games/'.$game->id, 'name' => 'updateGameForm', 'method' => 'PUT']) }}
         <div class="form-group">
             <label class="control-label">Title *</label>
-            <input type="text" name="title" value="{{{ $game->title }}}" class="form-control" placeholder="Enter Title" required>
+            <input type="text" name="title" value="{{{ $game->title }}}" class="form-control" placeholder="Title" required>
         </div>
 
         <div class="form-group">
@@ -25,16 +25,9 @@
         </div>
 
         <div class="form-group">
-            <label>Video *</label>
+            <label>YouTube Id *</label>
             <div class="controls">
-                <input name="video" value="" class="form-control" placeholder="Enter path to video" type="text" required>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label class="control-label">Image *</label>
-            <div class="controls">
-                <input name="image" value="" class="form-control" placeholder="Enter path to image" type="text" required>
+                <input name="youtube_id" value="{{{ $game->youtube_id }}}" class="form-control" placeholder="YouTube video id" type="text" required>
             </div>
         </div>
 
@@ -60,4 +53,17 @@
         </div>
     {{ Form::close() }}
 </div>
+@stop
+
+@section('scripts')
+<script>
+    function upload() {
+        cloudinary.openUploadWidget({cloud_name: 'golfpod', upload_preset: 'edjlgyed'},
+            function(error, result){
+                var public_id = result[0]['public_id'];
+                $("form input[name='image']").val(public_id);
+            }
+        );
+    }
+</script>
 @stop

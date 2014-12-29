@@ -60,6 +60,8 @@ class GamesController extends \BaseController {
         
         $game = new Game;
         $game->title = Input::get('title');
+        $game->category = Input::get('category');
+        $game->youtube_id = Input::get('youtube_id');
         $game->description = Input::get('description');
         $game->excerpt = Input::get('excerpt');
         $game->save();
