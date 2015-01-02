@@ -28,12 +28,9 @@ class HomeController extends BaseController {
 //        return User::orderBy('username', 'asc')->take(2)->get();
         
         // Get the most recent practice of the day.
-        $pod = Pod::orderBy('pod_date', 'desc')->first();
-        
-        // Get the 3 most recent posts.
-        $posts = Post::orderBy('created_at', 'desc')->take(3)->get();
+        $pods = Pod::orderBy('pod_date', 'desc')->take(7)->get();
 
-        return View::make('home', ['pod' => $pod, 'posts' => $posts]);
+        return View::make('home', ['pods' => $pods]);
     }
 
 }

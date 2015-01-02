@@ -12,26 +12,17 @@
                     </div>
                     <div class="navbar-collapse collapse">
                       <ul class="nav navbar-nav navbar-left">
-                        <li{{ (Request::is('/') ? ' class="active"' : '') }}>
+                        <li class="{{ (Request::is('/') ? 'active' : '') }}">
                             <a href="{{ URL::to('/') }}">Home</a>
                         </li>
-                        <li class="{{ (Request::is('games') ? 'active ' : '') }}dropdown">
-                          <a href="{{ URL::to('games') }}" class="dropdown-toggle">Games <b class="caret"></b></a>
-                          <ul class="dropdown-menu">
-                            <li><a href="{{ URL::to('games/putting') }}">Putting</a></li>
-                            <li><a href="{{ URL::to('games/chip-pitch-sand') }}">Chipping/Pitching/Bunker</a></li>
-                            <li><a href="{{ URL::to('games/driving-range') }}e">Driving Range</a></li>
-                            <li><a href="{{ URL::to('games/on-course') }}">On Course</a></li>
-                          </ul>
+                        <li class="{{ ((Request::is('games') || Request::is('games/*')) ? 'active ' : '') }}dropdown">
+                          <a href="{{ URL::to('games') }}">Games</a>
                         </li>
-                        <li{{ (Request::is('news') ? ' class="active"' : '') }}>
+                        <li class="{{ (Request::is('news') ? 'active"' : '') }}">
                             <a href="{{ URL::to('posts') }}">Blog</a>
                         </li>
-                        <li{{ (Request::is('about') ? ' class="active"' : '') }}>
+                        <li class="{{ (Request::is('about') ? 'active' : '') }}">
                             <a href="{{ URL::to('about') }}">About</a>
-                        </li>
-                        <li{{ (Request::is('contact') ? ' class="active"' : '') }}>
-                            <a href="{{ URL::to('contact') }}">Contact</a>
                         </li>
                       </ul>
                     </div>

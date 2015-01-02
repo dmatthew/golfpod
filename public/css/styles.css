@@ -111,7 +111,7 @@ form.inline-form {
 .page-header h1 a {
     color: rgb(80, 190, 70);
 }
-.page-header h1 a:hover {
+.page-header h1 a:hover img {
     border-bottom: 8px solid rgb(80, 190, 70);
 }
 .logo-ball {
@@ -205,6 +205,9 @@ ul.nav li.dropdown:hover .dropdown-menu {
 .heading {
     margin-top: 10px;
 }
+.pod-video {
+    padding-left:0px;
+}
 .pod-content {
     background-color: rgba(255, 255, 255, 0.6);
     margin-top: 53px;
@@ -255,6 +258,9 @@ ul.nav li.dropdown:hover .dropdown-menu {
 .read-more:hover {
     background-color: #515a69;
     color: #fff;
+}
+.clear-grid {
+    clear: both;
 }
 
 
