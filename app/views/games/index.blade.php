@@ -43,12 +43,14 @@
     <div class="container">
         <div class="row">
             @foreach($games as $key=>$game)
-            <div class="col-md-3">
-                <a href="{{ URL::to("games/$game->category/$game->slug") }}">
-                    <img src="http://img.youtube.com/vi/{{{ $game->youtube_id }}}/mqdefault.jpg" alt="{{{ $game->title }}}" class="img-responsive">
-                    <h2>{{{ $game->title }}}</h2>
-                    <p>{{{ $game->category }}}</p>
-                </a>
+            <div class="col-md-6 col-lg-3 post">
+                <div class="thumbnail">
+                    <a href="{{ URL::to("games/$game->category/$game->slug") }}">
+                        <img src="http://img.youtube.com/vi/{{{ $game->youtube_id }}}/mqdefault.jpg" alt="{{{ $game->title }}}" class="img-responsive">
+                        <h2>{{{ $game->title }}}</h2>
+                        <p class="category-flag">{{{ $game->category }}}</p>
+                    </a>
+                </div>
             </div>
             @endforeach
         </div>

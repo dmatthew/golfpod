@@ -69,7 +69,7 @@ hr {
     border-width: 4px;
 }
 .featurette-divider {
-    margin: 80px 0px;
+    margin: 40px 0px;
 }
 
 
@@ -90,7 +90,7 @@ form.inline-form {
     background-size: cover;
 }
 .jumbotron-sm {
-    padding: 50px 0px;
+    padding: 20px 0px;
 }
 .jumbotron-lg {
     padding: 150px 0px;
@@ -156,9 +156,6 @@ form.inline-form {
 }
 .navbar-brand:hover, .navbar-brand:focus {
     color: #fff;
-}
-.navbar-nav {
-    margin: 0px;
 }
 .navbar-nav > li {
     font-size: 16px;
@@ -240,6 +237,9 @@ ul.nav li.dropdown:hover .dropdown-menu {
     color: #333;
     font-weight: 600;
 }
+.post .thumbnail {
+    text-align: center;
+}
 .post .thumbnail:hover  {
     box-shadow: 0px 2px 5px #bbb;
 }
@@ -261,6 +261,14 @@ ul.nav li.dropdown:hover .dropdown-menu {
 }
 .clear-grid {
     clear: both;
+}
+.category-flag {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    background-color: #50BE46;
+    color: #fff;
+    padding: 4px 6px;
 }
 
 
@@ -541,20 +549,29 @@ ul.nav li.dropdown:hover .dropdown-menu {
     color: rgb(80, 190, 70);
 }
 
-@media (max-width: 992px) {
-    .nav li {
-        float: none;
+@media (min-width: 768px) {
+    .jumbotron-sm {
+        padding: 30px 0px;
     }
-    ul.nav li.dropdown:hover .dropdown-menu {
-        float: none;
-        margin-top: 0px;
-        position: static;
-        width: auto;
+    .featurette-divider {
+        margin: 50px 0px;
     }
+}
 
+@media (min-width: 992px) {
+    .jumbotron-sm {
+        padding: 40px 0px;
+    }
+    .featurette-divider {
+        margin: 60px 0px;
+    }
+}
 
-    /* Game Description Pages */
-    .container video {
-        width: 95%;
+@media (min-width: 1200px) {
+    .jumbotron-sm {
+        padding: 50px 0px;
+    }
+    .featurette-divider {
+        margin: 80px 0px;
     }
 }

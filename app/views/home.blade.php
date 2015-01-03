@@ -56,7 +56,7 @@
                         <p class="post-date">{{{ $pod->getDate() }}}</p>
                         <h3><a href="{{{ URL::to("games/" . $pod->game->category . "/" . $pod->game->slug) }}}">{{{ $pod->game->title }}}</a></h3>
                         <p>{{{ str_limit($pod->game->excerpt, 100, '') }}}</p>
-                        <p>{{{ $pod->game->category }}}</p>
+                        <p class="category-flag">{{{ $pod->game->category }}}</p>
                         <a class="read-more" href="{{{ URL::to("games/" . $pod->game->category . "/" . $pod->game->slug) }}}">read more ⇨</a>
                     </div>
                 </div>

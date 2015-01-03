@@ -11,11 +11,16 @@
     
     
     <!-- GAME VIDEO -->
-    <div class="container container-video embed-youtube">
-        <iframe width="560" height="315" src="http://www.youtube.com/embed/{{{ $game->youtube_id }}}?rel=0" frameborder="0" allowfullscreen></iframe>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-reponsive-item" width="560" height="315" src="http://www.youtube.com/embed/{{{ $game->youtube_id }}}?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- END GAME VIDEO -->
-    
     
     
     <div class="container">
