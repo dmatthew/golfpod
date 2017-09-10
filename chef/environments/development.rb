@@ -70,7 +70,7 @@ default_attributes(
                CRAFT_STORAGE_PATH:         '/vagrant/craft/storage/',
                CRAFT_TEMPLATES_PATH:       '/vagrant/craft/templates/',
                CRAFT_TRANSLATIONS_PATH:    '/vagrant/craft/translations/',
-               CRAFT_SITE_URL:             'http://dev.golfpod.org/',
+               CRAFT_SITE_URL:             'https://dev.golfpod.org/',
                CRAFT_SITENAME:             'GolfPOD',
                CRAFT_VALIDATION_KEY:       'lEHgqQtkXSKaHJEbT3dXf7RM6Q0trvhqkdjtmajqyc',
                CRAFT_VENDOR_PATH:          '/vagrant/vendor/',

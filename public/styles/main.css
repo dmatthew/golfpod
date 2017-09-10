@@ -1,7 +1,220 @@
+/* General */
 body {
-  background-color: #ffdd8c;
+    color: #5A5A5A;
+    font-family: "Open Sans", arial, sans-serif;
+}
+.main {
+    margin-top: 20px;
+}
+li {
+    list-style-type: none;
+}
+a {
+    color: #666;
+}
+a:hover, a:focus {
+    text-decoration: none;
+}
+p > a, a:hover {
+    color: rgb(80, 190, 70);
+}
+.margin-b-20 {
+    margin-bottom: 20px;
+}
+.margin-t-20 {
+    margin-top: 20px;
+}
+.message {
+    color: #f00;
+}
+.btn-primary {
+    background-color: #515A69;
+    border-color: #444C5A;
+}
+.btn-success {
+    background-color: #50BE46;
+    border-color: #47AB3E;
+}
+.text-primary {
+   color: #515A69;
+}
+.text-success {
+    color: #50BE46;
+}
+.navbar-primary {
+   background-color: #515A69;
+}
+.navbar-success {
+    background-color: #50BE46;
+}
+.btn-submit {
+    background-color: rgb(80, 190, 70);
+    color: #fff;
+}
+.btn-submit:hover {
+    background-color: #515a69;
+    color: #fff;
+}
+.marketing .col-lg-4 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+hr {
+    border-width: 4px;
+}
+.featurette-divider {
+    margin: 40px 0px;
 }
 
-h1 {
-  color: #740b4e;
+
+/* General Jumbotron Styles */
+.jumbotron {
+    background-image: url(../images/course-gray.jpg);
+    background-size: cover;
+}
+.jumbotron-sm {
+    padding: 20px 0px;
+}
+.jumbotron-lg {
+    padding: 150px 0px;
+}
+
+
+/* Page Header */
+.page-header {
+    border: none;
+    height: 115px;
+    margin: 0px;
+}
+.page-header h1 {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 68px;
+    font-weight: 900;
+}
+.page-header h1 a {
+    color: rgb(80, 190, 70);
+}
+.page-header h1 a:hover {
+    border-bottom: 8px solid rgb(80, 190, 70);
+}
+.logo-ball {
+    left: 197px;
+    padding-top: 9px;
+    position: absolute;
+    vertical-align: top;
+    width: 54px;
+}
+
+
+/* Navbar */
+.navbar-wrapper {
+    background: none repeat scroll 0% 0% #50BE46;
+}
+.navbar-wrapper .container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.navbar {
+    border: none;
+    margin-bottom: 0px;
+}
+.navbar-collapse {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.navbar-toggle {
+    background-color: #007700;
+    padding: 10px 18px;
+    margin: 0px -15px 0px 0px;
+    border-radius: 0px;
+}
+.navbar-toggle .glyphicon {
+    color: #fff;
+    font-size: 24px;
+}
+.navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+.navbar-brand:hover, .navbar-brand:focus {
+    color: #fff;
+}
+.nav > li {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.navbar-success .active > a {
+    background-color: transparent;
+    color: #333;
+}
+.navbar-success .active > a:hover {
+    background-color: transparent;
+}
+.navbar-success li > a {
+    color: #fff;
+}
+.navbar-success li > a:hover {
+    background-color: #007700;
+    color: #fff;
+    text-decoration: underline;
+}
+.navbar-success .dropdown:hover {
+    background-color: #007700;
+    color: #000;
+}
+ul.nav li.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.dropdown-menu li a:hover {
+    background-color: rgb(80, 190, 70);
+}
+
+
+/* About Page */
+.jumbotron h1 {
+    color: #fff;
+    text-align: center;
+    text-shadow: 0px 0px 1px #333;
+}
+.marketing p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 1.5em;
+}
+.section-heading {
+    font-size: 50px;
+    margin-bottom: 40px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+@media (min-width: 768px) {
+    .jumbotron-sm {
+        padding: 30px 0px;
+    }
+    .featurette-divider {
+        margin: 50px 0px;
+    }
+}
+
+@media (min-width: 992px) {
+    .jumbotron-sm {
+        padding: 40px 0px;
+    }
+    .featurette-divider {
+        margin: 60px 0px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .jumbotron-sm {
+        padding: 50px 0px;
+    }
+    .featurette-divider {
+        margin: 80px 0px;
+    }
 }

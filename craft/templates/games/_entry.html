@@ -16,9 +16,26 @@
 {% extends "_layout" %}
 
 {% block content %}
-	<article>
-		<h1>{{ entry.title }}</h1>
-		<p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
-		{{ entry.body }}
-	</article>
+    <div>
+        <!-- GAME TITLE JUMBOTRON -->
+        <div class="jumbotron jumbotron-sm">
+            <h1>{{ entry.title }}</h1>
+        </div>
+        <!-- END GAME TITLE JUMBOTRON -->
+
+        <div class="container">
+            <hr class="featurette-divider">
+        </div>
+
+        <!-- GAME DESCRIPTION -->
+        <div class="container marketing">
+            <div class="col-xs-12">
+                <h2 id="how-to-play" class="section-heading">How to Play</h2>
+            </div>
+            <div class="col-xs-12">
+                <p>{{ entry.body }}</p>
+            </div>
+        </div>
+        <!-- END GAME DESCRIPTION -->
+    </div>
 {% endblock %}

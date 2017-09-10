@@ -11,16 +11,15 @@
  #}
 
 {% extends "_layout" %}
-{% set title = "Recipes" %}
+{% set title = "Games" %}
 
 {% block content %}
-	<h1>Recipes</h1>
+	<h1>Games</h1>
 
-	{% for entry in craft.entries.section('recipes').find() %}
+	{% for entry in craft.entries.section('games').find() %}
 		<article>
 			<h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
-			<p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
-			{{ entry.body.getPage(1) }}
+			{{ entry.shortDescription }}
 			<p><a href="{{ entry.url }}">Continue reading</a></p>
 		</article>
 	{% endfor %}
