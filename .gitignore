@@ -1,0 +1,14 @@
+# composer
+bin/
+vendor/
+craft/config/license.key
+
+# vagrant + chef
+.vagrant/
+chef/nodes/*.json
+
+# environment configuration
+.env
+*.key
+*.crt
+*.cert

@@ -1,0 +1,85 @@
+locales:
+  - en_us
+assetSources: {  }
+assetTransforms: {  }
+fields:
+  Default:
+    body:
+      name: Body
+      required: false
+      instructions: null
+      translatable: '1'
+      type: RichText
+      settings:
+        configFile: Standard.json
+        columnType: text
+      context: global
+    tags:
+      name: Tags
+      required: false
+      instructions: null
+      translatable: '0'
+      type: Tags
+      settings:
+        source: 'taggroup:default'
+      context: global
+globalSets: {  }
+plugins: {  }
+sections:
+  homepage:
+    name: Homepage
+    type: single
+    hasUrls: '1'
+    template: index
+    maxLevels: null
+    enableVersioning: '1'
+    locales:
+      en_us:
+        enabledByDefault: '1'
+        urlFormat: __home__
+        nestedUrlFormat: null
+    entryTypes:
+      homepage:
+        name: Homepage
+        hasTitleField: '1'
+        titleLabel: Title
+        titleFormat: null
+        fieldLayout:
+          tabs:
+            Content:
+              body: '1'
+  news:
+    name: News
+    type: channel
+    hasUrls: '1'
+    template: news/_entry
+    maxLevels: null
+    enableVersioning: '1'
+    locales:
+      en_us:
+        enabledByDefault: '1'
+        urlFormat: 'news/{postDate.year}/{slug}'
+        nestedUrlFormat: null
+    entryTypes:
+      news:
+        name: News
+        hasTitleField: '1'
+        titleLabel: Title
+        titleFormat: null
+        fieldLayout:
+          tabs:
+            Content:
+              body: '1'
+              tags: '0'
+userGroups: {  }
+users:
+  fieldLayout:
+    fields: {  }
+elementIndexSettings: {  }
+pluginData: {  }
+categoryGroups: {  }
+tagGroups:
+  default:
+    name: Default
+    fieldLayout:
+      fields: {  }
