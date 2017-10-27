@@ -1,0 +1,19 @@
+{% extends "_layout" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <!-- BLOG MAIN -->
+            <div class="col-md-9 blog-main">
+                <div class="blog-post">
+                    <h1 class="blog-post-title">{{ entry.title }}</h1>
+                    <p class="blog-date">{{ entry.postDate | date('M d, Y') }}</p>
+                    <p class="lead blog-description">{{ entry.shortDescription }}</p>
+                    <img class="img-responsive blog-img" src="" alt="">
+                    <p>{{ entry.body }}</p>
+                </div>
+            </div>
+            <!-- END BLOG MAIN -->
+        </div>
+    </div>
+{% endblock %}

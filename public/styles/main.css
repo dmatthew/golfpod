@@ -170,6 +170,35 @@ ul.nav li.dropdown:hover .dropdown-menu {
     background-color: rgb(80, 190, 70);
 }
 
+/* Home: News & Features */
+.section-title {
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 5px;
+}
+.post h3 a {
+    color: #333;
+    font-weight: 600;
+}
+.post .thumbnail:hover h3 a {
+    color: rgb(80, 190, 70);
+}
+.post-date {
+    color: #999;
+}
+.read-more {
+    background-color: rgb(80, 190, 70);
+    color: #fff;
+    display: inline-block;
+    padding: 6px 8px;
+}
+.read-more:hover {
+    background-color: #515a69;
+    color: #fff;
+}
+.clear-grid {
+    clear: both;
+}
+
 /* Games Page */
 #games-jumbotron {
     margin-bottom: 0px;
@@ -209,6 +238,45 @@ ul.nav li.dropdown:hover .dropdown-menu {
     border-color: rgba(80, 190, 70, 1);
 }
 
+/* News and Features Pages */
+.blog-header {
+    margin-top: 20px;
+}
+.blog-main {
+    font-size: 16px;
+    line-height: 1.65;
+}
+.blog-post-title {
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.blog-description {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+.blog-img {
+    margin: 20px 0px;
+}
+.blog-date {
+    color: #999;
+}
+.blog-row {
+    border-bottom: 4px solid #eee;
+    padding: 32px 0px 12px;
+}
+.blog-row:last-child {
+        border-bottom: none;
+}
+.blog-row h2 {
+    margin: 0px 0px 5px;
+}
+.blog-row p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
 
 /* About Page */
 .jumbotron h1 {
@@ -230,6 +298,49 @@ ul.nav li.dropdown:hover .dropdown-menu {
     text-decoration: underline;
 }
 
+/* Social Buttons */
+.btn-social {
+    border-radius: 50px;
+    display: inline-block;
+}
+.btn-social .fa {
+    border-radius: 50%;
+    color: white;
+    display: inline-block;
+    font-size: 26px;
+    padding-top: 7px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+}
+.btn-facebook {
+    background-color: #3b5998;
+}
+.btn-twitter {
+    background-color: #2ba9e1;
+}
+.btn-google-plus {
+    background-color: #dd4b39;
+}
+
+/* Footer */
+.footer {
+    background-color: #515a69;
+    box-shadow: 0px 2px 5px #bbb inset;
+    padding: 20px 0 10px;
+}
+.footer h2 > a {
+    color: rgb(80, 190, 70);
+}
+.footer h3, .footer a, .footer p {
+    color: #fff;
+}
+.footer h2 > a:hover {
+    text-decoration: underline;
+}
+.footer a:hover {
+    color: rgb(80, 190, 70);
+}
 
 @media (min-width: 768px) {
     .jumbotron-sm {
