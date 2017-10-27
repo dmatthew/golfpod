@@ -170,6 +170,45 @@ ul.nav li.dropdown:hover .dropdown-menu {
     background-color: rgb(80, 190, 70);
 }
 
+/* Games Page */
+#games-jumbotron {
+    margin-bottom: 0px;
+}
+.filter-box {
+    background-color: #515a69;
+    padding: 10px 0px;
+}
+.nav-pills > li > a {
+    color: #fff;
+    text-transform: uppercase;
+}
+.nav-pills > li.active > a {
+    background-color: rgb(80, 190, 70);
+}
+.nav-pills > li.active > a:hover {
+    background-color: rgb(80, 190, 70);
+}
+.nav-pills > li > a:hover {
+    background-color: rgb(80, 190, 70);
+    color: #fff;
+}
+.pagination > li > a {
+    color: rgb(80, 190, 70);
+}
+.pagination > li > a:hover {
+    background-color: #515a69;
+    border-color: #515a69;
+    color: #fff;
+}
+.pagination > .active > a {
+    background-color: rgba(80, 190, 70, 1);
+    border-color: rgba(80, 190, 70, 1);
+}
+.pagination > .active > a:hover {
+    background-color: rgba(80, 190, 70, 1);
+    border-color: rgba(80, 190, 70, 1);
+}
+
 
 /* About Page */
 .jumbotron h1 {
