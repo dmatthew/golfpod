@@ -12,3 +12,7 @@ chef/nodes/*.json
 *.key
 *.crt
 *.cert
+
+craft/storage/logs
+craft/storage/runtime
+craft/storage/backups
