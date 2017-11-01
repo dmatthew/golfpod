@@ -18,7 +18,7 @@
  #}
 
 {% extends "_layout" %}
-{% set pod = craft.entries.id(craft.entries.section('games').limit(1).ids()).first() %}
+{% set pod = craft.entries.id(craft.entries.section('games').limit(1).ids()).one() %}
 
 {% block content %}
     <!-- PRACTICE OF THE DAY -->
@@ -36,7 +36,7 @@
                 <div class="col-sm-6 pod-content">
                     <p>{{ pod.postDate | date('M d, Y') }}</p>
                     <h1><a href="{{ pod.url }}">{{ pod.title }}</a></h1>
-                    <p><span><a href="{{ pod.gameCategory.first().url }}">{{ pod.gameCategory.first() }}</a></span><p>
+                    <p><span><a href="{{ pod.gameCategory.one().url }}">{{ pod.gameCategory.one() }}</a></span><p>
                     <p>{{ pod.body }}</p>
                     <a class="read-more" href="{{ pod.url }}">More details</a>
                 </div>
@@ -51,7 +51,7 @@
         <div class="col-md-9">
             <h3 class="section-title margin-b-20"><a href="#">News & Features</a></h3>
             <div class="row">
-            {% for entry in craft.entries.section('news').limit(3).find() %}
+            {% for entry in craft.entries.section('news').limit(3).all() %}
                 <div class="col-md-6 col-lg-4 post">
                     <div class="thumbnail">
                         <a href="#">

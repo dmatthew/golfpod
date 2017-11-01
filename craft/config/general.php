@@ -30,4 +30,6 @@ return array(
 	// Dev Mode (see https://craftcms.com/support/dev-mode)
 	'devMode' => true,
 
+	'securityKey' => getenv('CRAFT_SECURITY_KEY')
+
 );

@@ -35,6 +35,4 @@ return array(
 	// The prefix to use when naming tables. This can be no more than 5 characters.
 	'tablePrefix' => getenv('DB_TABLE_PREFIX') ?: '',
 
-	'initSQLs'      => [$sqlInit],
-
 );
