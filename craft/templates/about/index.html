@@ -1,6 +1,6 @@
 {% extends "_layout" %}
 
-{% set blocks = entry.articleBody %}
+{% set blocks = entry.articleBody.all() %}
 
 {% block content %}
     <!-- TITLE JUMBOTRON -->

@@ -49,13 +49,13 @@
     <!-- GAMES GALLERY -->
     <div class="container">
         <div class="row">
-    	{% for entry in craft.entries.section('games').find() %}
+    	{% for entry in craft.entries.section('games').all() %}
             <div class="col-md-6 col-lg-3 post">
                 <div class="thumbnail">
         			<a href="{{ entry.url }}">
                         <!--<img src="" alt="{{ entry.title }}" class="img-fluid">-->
                         <h2>{{ entry.title }}</h2>
-                        <p class="category-flag">{{ entry.gameCategory.first() }}</p>
+                        <p class="category-flag">{{ entry.gameCategory.one() }}</p>
                     </a>
                 </div>
     		</div>

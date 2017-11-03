@@ -8,7 +8,7 @@
                 <p class="lead blog-description">Stories and thoughts on golf</p>
             </div>
             <div class="col-md-12 blog-main">
-            {% for entry in craft.entries.section('news').find() %}
+            {% for entry in craft.entries.section('news').all() %}
                 <div class="row blog-row">
                     <div class="col-md-3">
                         <img class="img-fluid" alt="" src="images/stock01.jpg">
