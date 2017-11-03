@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "nerds-and-company/schematic",
-            "version": "3.8.6",
+            "version": "3.8.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nerds-and-company/schematic.git",
-                "reference": "5de243abc4410fe60df8bf91d43fd7c3d9f45cf9"
+                "reference": "27039d8510050b4c385b5fcd436bba1edf59b481"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nerds-and-company/schematic/zipball/5de243abc4410fe60df8bf91d43fd7c3d9f45cf9",
-                "reference": "5de243abc4410fe60df8bf91d43fd7c3d9f45cf9",
+                "url": "https://api.github.com/repos/nerds-and-company/schematic/zipball/27039d8510050b4c385b5fcd436bba1edf59b481",
+                "reference": "27039d8510050b4c385b5fcd436bba1edf59b481",
                 "shasum": ""
             },
             "require": {
@@ -79,20 +79,20 @@
                 }
             ],
             "description": "Craft setup and sync tool",
-            "time": "2017-09-05T12:00:45+00:00"
+            "time": "2017-10-13T13:15:40+00:00"
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.3.8",
+            "version": "v3.3.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "1d8c2a99c80862bdc3af94c1781bf70f86bccac0"
+                "reference": "8c7bf1e7d5d6b05a690b715729cb4cd0c0a99c46"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/1d8c2a99c80862bdc3af94c1781bf70f86bccac0",
-                "reference": "1d8c2a99c80862bdc3af94c1781bf70f86bccac0",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/8c7bf1e7d5d6b05a690b715729cb4cd0c0a99c46",
+                "reference": "8c7bf1e7d5d6b05a690b715729cb4cd0c0a99c46",
                 "shasum": ""
             },
             "require": {
@@ -134,7 +134,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2017-07-29T21:54:42+00:00"
+            "time": "2017-10-05T14:43:42+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
