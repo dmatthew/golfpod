@@ -26,3 +26,5 @@ jobs:
           paths:
             - ./vendor
           key: v1-dependencies-{{ checksum "composer.json" }}
+
+      - run: rsync -az ~/repo $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_DIRECTORY
