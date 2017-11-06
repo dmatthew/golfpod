@@ -2,21 +2,8 @@
     "name": "golfpod",
     "description": "GolfPOD - CraftCMS",
     "require": {
-        "vlucas/phpdotenv": "^2.4",
-        "nerds-and-company/schematic": "^3.8"
-    },
-    "config": {
-        "bin-dir": "bin"
-    },
-    "extra": {
-        "installer-paths": {
-            "craft/plugins/mix": [
-                "dnunez24/craft-laravel-mix"
-            ],
-            "craft/plugins/{$name}/": [
-                "type:craft-plugin"
-            ]
-        },
-        "craft-plugins-path": "craft/plugins"
+        "craftcms/cms": "~3.0.0-beta.29",
+        "vlucas/phpdotenv": "^2.4.0",
+        "roave/security-advisories": "dev-master"
     }
 }

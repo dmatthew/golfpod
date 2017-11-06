@@ -13,6 +13,7 @@ chef/nodes/*.json
 *.crt
 *.cert
 
-craft/storage/logs
-craft/storage/runtime
-craft/storage/backups
+.idea
+storage/logs
+storage/runtime
+storage/backups

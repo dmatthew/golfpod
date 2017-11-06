@@ -53,7 +53,7 @@ default_attributes(
            'dev.golfpod.org' => {
                force_www: true,
                domain:  'dev.golfpod.org',
-               docroot: '/vagrant/public',
+               docroot: '/vagrant/web',
                cert:    '/vagrant/dev.golfpod.org.crt',
                key:     '/vagrant/dev.golfpod.org.key'
            }
@@ -61,18 +61,18 @@ default_attributes(
        envs: {
            '/vagrant/.env' => {
                CRAFT_APP_ID:               'golfpod',
-               CRAFT_APP_PATH:             '/vagrant/craft/vendor/craftcms/cms/src/',
-               CRAFT_BASE_PATH:            '/vagrant/craft/',
-               CRAFT_CONFIG_PATH:          '/vagrant/craft/config/',
+               CRAFT_APP_PATH:             '/vagrant/vendor/craftcms/cms/src/',
+               CRAFT_BASE_PATH:            '/vagrant/',
+               CRAFT_CONFIG_PATH:          '/vagrant/config/',
                CRAFT_ENVIRONMENT:          'development',
-               CRAFT_FRAMEWORK_PATH:       '/vagrant/craft/vendor/yiisoft/yii2/',
-               CRAFT_PLUGINS_PATH:         '/vagrant/craft/plugins/',
-               CRAFT_STORAGE_PATH:         '/vagrant/craft/storage/',
-               CRAFT_TEMPLATES_PATH:       '/vagrant/craft/templates/',
-               CRAFT_TRANSLATIONS_PATH:    '/vagrant/craft/translations/',
+               CRAFT_FRAMEWORK_PATH:       '/vagrant/vendor/yiisoft/yii2/',
+               CRAFT_PLUGINS_PATH:         '/vagrant/plugins/',
+               CRAFT_STORAGE_PATH:         '/vagrant/storage/',
+               CRAFT_TEMPLATES_PATH:       '/vagrant/templates/',
+               CRAFT_TRANSLATIONS_PATH:    '/vagrant/translations/',
                CRAFT_SITE_URL:             'https://dev.golfpod.org/',
                CRAFT_SITENAME:             'GolfPOD',
-               CRAFT_VENDOR_PATH:          '/vagrant/craft/vendor/',
+               CRAFT_VENDOR_PATH:          '/vagrant/vendor/',
                CRAFT_SECURITY_KEY:         'DfHVm1svvFiY3NAMOdgaVh4hz4xEodT9',
                DB_SERVER:                  '192.168.55.20',
                DB_PORT:                    3306,
