@@ -6,13 +6,6 @@
  * All of your system's database configuration settings go in here.
  * You can see a list of the default settings in craft/app/etc/config/defaults/db.php
  */
- $sqlInit  = "SET SESSION sql_mode='";
- $sqlInit .= "STRICT_TRANS_TABLES,";
- $sqlInit .= "NO_ZERO_IN_DATE,";
- $sqlInit .= "NO_ZERO_DATE,";
- $sqlInit .= "ERROR_FOR_DIVISION_BY_ZERO,";
- $sqlInit .= "NO_AUTO_CREATE_USER,";
- $sqlInit .= "NO_ENGINE_SUBSTITUTION';";
 
 return array(
 

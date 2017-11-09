@@ -64,6 +64,7 @@ default_attributes(
                CRAFT_APP_PATH:             '/vagrant/vendor/craftcms/cms/src/',
                CRAFT_BASE_PATH:            '/vagrant/',
                CRAFT_CONFIG_PATH:          '/vagrant/config/',
+               CRAFT_CP_TRIGGER:           'admin',
                CRAFT_ENVIRONMENT:          'development',
                CRAFT_FRAMEWORK_PATH:       '/vagrant/vendor/yiisoft/yii2/',
                CRAFT_PLUGINS_PATH:         '/vagrant/plugins/',

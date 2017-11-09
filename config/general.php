@@ -25,10 +25,10 @@ return array(
 	'omitScriptNameInUrls' => 'true',
 
 	// Control Panel trigger word
-	'cpTrigger' => 'admin',
+	'cpTrigger' => getenv('CRAFT_CP_TRIGGER'),
 
 	// Dev Mode (see https://craftcms.com/support/dev-mode)
-	'devMode' => true,
+	'devMode' => getenv('CRAFT_ENVIRONMENT') == 'development' ? true : false,
 
 	'securityKey' => getenv('CRAFT_SECURITY_KEY')
 
