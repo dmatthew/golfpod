@@ -1,18 +1,19 @@
-/bootstrap/*
-/vendor
-composer.phar
-composer.lock
-server.php
-.env.*.php
-.env.php
-.DS_Store
-Thumbs.db
-nbproject
-/app/config/*
-/app/database/seeds/*
-/app/database/migrations/*
-/app/lang/*
-/app/start/*
-/app/storage/*
-/app/tests/*
-/public/img/*
+# composer
+bin/
+vendor/
+craft/config/license.key
+
+# vagrant + chef
+.vagrant/
+chef/nodes/*.json
+
+# environment configuration
+.env
+*.key
+*.crt
+*.cert
+
+.idea
+storage/logs
+storage/runtime
+storage/backups

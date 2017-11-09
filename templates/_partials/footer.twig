@@ -1,0 +1,32 @@
+<!-- FOOTER -->
+<div class="clearfix footer">
+    <div class="container">
+        <div id="footer-content" class="row">
+            <div class="col-lg-4">
+                <h2><a href="{{ url('/') }}" title="Homepage">GolfPOD</a></h2>
+                <h3><a href="{{ url('about') }}" title="Learn about GolfPOD">About Us</a></h3>
+            </div>
+            <div class="col-lg-4">
+                <h3><a href="{{ url('practice-of-the-day') }}">Practice of the day</a></h3>
+                <h3><a href="{{ url('games') }}">Games</a></h3>
+                <ul>
+                    <li><a href="{{ url('games/putting') }}">Putting</a></li>
+                    <li><a href="{{ url('games/chip-pitch-sand') }}">Chipping/Pitching/Bunker</a></li>
+                    <li><a href="{{ url('games/driving-range') }}">Driving Range</a></li>
+                    <li><a href="{{ url('games/on-course') }}">On Course</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <h3><a href="#">Follow Us!</a></h3>
+                <a href="#" class="btn-social btn-twitter"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="btn-social btn-google-plus"><i class="fa fa-google-plus"></i></a>
+                <a href="#" class="btn-social btn-facebook"><i class="fa fa-facebook"></i></a>
+            </div>
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+    <div class="container">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; {{ now | date('Y') }} GolfPOD</p>
+    </div>
+</div>
+<!-- END FOOTER -->

@@ -1,0 +1,41 @@
+{#
+ # Games entry template
+ # -------------------
+ #
+ # This template gets loaded whenever a Game entry’s URL is
+ # requested. That’s because the Game section’s Template setting is
+ # set to games/_entry”, the path to this template.
+ #
+ # When this template is loaded, it will already have an ‘entry’
+ # variable, set to the requested Games entry.
+ #
+ # See this page for more details on how Craft routes requests:
+ # http://craftcms.com/docs/routing
+ #}
+
+{% extends "_layout" %}
+
+{% block content %}
+    <div>
+        <!-- GAME TITLE JUMBOTRON -->
+        <div class="jumbotron jumbotron-sm">
+            <h1>{{ entry.title }}</h1>
+        </div>
+        <!-- END GAME TITLE JUMBOTRON -->
+
+        <div class="container">
+            <hr class="featurette-divider">
+        </div>
+
+        <!-- GAME DESCRIPTION -->
+        <div class="container marketing">
+            <div class="col-xs-12">
+                <h2 id="how-to-play" class="section-heading">How to Play</h2>
+            </div>
+            <div class="col-xs-12">
+                <p>{{ entry.body }}</p>
+            </div>
+        </div>
+        <!-- END GAME DESCRIPTION -->
+    </div>
+{% endblock %}

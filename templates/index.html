@@ -1,0 +1,100 @@
+{#
+ # Homepage template
+ # ---------------
+ #
+ # When this template gets loaded, it will be because someone has accessed
+ # http://yoursite.com/ (without any URI). Craft checks to see if you have
+ # a Single section set to be the Homepage (as you do, by default), and
+ # loads the section’s Template (this file). A special ‘entry’ variable
+ # will already be set for you, assigned to the Homepage entry.
+ #
+ # It's worth noting that even if you didn't have a Homepage Single section,
+ # as long as this template remains at craft/templates/index.html, it
+ # would still be the one to get loaded when accessing http://yoursite.com/,
+ # albeit without an ‘entry’ variable already set for you.
+ #
+ # See this page for more details on how Craft routes requests:
+ # http://craftcms.com/docs/routing
+ #}
+
+{% extends "_layout" %}
+{% set pod = craft.entries.id(craft.entries.section('games').limit(1).ids()).one() %}
+
+{% block content %}
+    <!-- PRACTICE OF THE DAY -->
+    <div class="container-fluid pod-row margin-b-20">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 pod-video">
+                    <h2 class="heading"><a href="{{ url('') }}">Practice of the day</a></h2>
+                    <div class="thumbnail">
+                        <div class="container-video embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-reponsive-item" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 pod-content">
+                    <p>{{ pod.postDate | date('M d, Y') }}</p>
+                    <h1><a href="{{ pod.url }}">{{ pod.title }}</a></h1>
+                    <p><span><a href="{{ pod.gameCategory.one().url }}">{{ pod.gameCategory.one() }}</a></span><p>
+                    <p>{{ pod.body }}</p>
+                    <a class="read-more" href="{{ pod.url }}">More details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END PRACTICE OF THE DAY -->
+
+    <!-- News & Features -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <h3 class="section-title margin-b-20"><a href="#">News & Features</a></h3>
+            <div class="row">
+            {% for entry in craft.entries.section('news').limit(3).all() %}
+                <div class="col-md-6 col-lg-4 post">
+                    <div class="thumbnail">
+                        <a href="#">
+                            <img src="images/stock01.jpg" class="img-fluid" alt="" title="" />
+                        </a>
+                        <div class="caption">
+                            <p class="post-date">
+                            {{ entry.postDate | date('M d, Y') }}
+                            </p>
+                            <h3><a href="#">{{ entry.title }}</a></h3>
+                            {#<p>{{ entry.excerpt }}</p>#}
+                            <a class="read-more" href="#">read more &#8680;</a>
+                        </div>
+                    </div>
+                </div><!-- /.col-md-4 -->
+            {% endfor %}
+            </div>
+        </div><!-- /.col-md-9 -->
+
+        <!-- Follow Us! -->
+        <div class="col-md-3">
+            <h3 class="section-title margin-b-20">Follow Us!</h3>
+            <div class="thumbnail">
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="images/stock01.jpg" alt="" style="width:64px; height:64px;">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">Media heading</h4>
+                        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper.</p>
+                    </div>
+                </div>
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="images/stock01.jpg" alt="" style="width:64px; height:64px;">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">Media heading</h4>
+                        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus.</p>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /follow us! -->
+    </div>
+</div>
+{% endblock %}

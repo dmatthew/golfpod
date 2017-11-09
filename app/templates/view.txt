@@ -1,7 +1,0 @@
-@extends('layouts/default')
-@section('title', '')
-@section('description', '')
-
-@section('content')
-
-@stop

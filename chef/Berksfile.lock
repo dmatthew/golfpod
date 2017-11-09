@@ -1,0 +1,76 @@
+DEPENDENCIES
+  cop_base
+    git: git@github.com:copious-cookbooks/base.git
+    revision: 7168c10765048ac15bb1b242ae8215ab7cf38bca
+    tag: 0.0.12
+  cop_composer
+    git: git@github.com:copious-cookbooks/composer.git
+    revision: 6ce367529a5306288dc5beae6b095fc52dbf23d7
+    tag: 0.1.0
+  cop_craft
+    git: git@github.com:copious-cookbooks/craft.git
+    revision: c010e19336ad4c030dd1d95d6b7078fa33485356
+    tag: 0.1.6
+  cop_mysql
+    git: git@github.com:copious-cookbooks/mysql.git
+    revision: 563617c0ee4d2159a49e139fadc2cfd75dad3c73
+    tag: 0.7.4
+  cop_nginx
+    git: git@github.com:copious-cookbooks/nginx.git
+    revision: 5ccd2caf8cf2ee92ed6478d602a356de4bb61813
+    tag: 0.4.7
+  cop_ntp
+    git: git@github.com:copious-cookbooks/ntp.git
+    revision: 4896a5825e9f6312c3a563dce3989306c3066938
+    tag: 2.0.2
+  cop_php
+    git: git@github.com:copious-cookbooks/php.git
+    revision: 118f629cedd383cf5d39a89d8929b7ba3e23cf6b
+    tag: 0.6.5
+  cop_tls
+    git: https://github.com/copious-cookbooks/tls.git
+    revision: d87cf3e5338fa3ab0e4aa20f9740cfa81b0ccb51
+    tag: 0.2.0
+  craft-data
+    path: cookbooks/craft-data
+
+GRAPH
+  apt (6.1.3)
+  build-essential (8.0.3)
+    mingw (>= 1.1)
+    seven_zip (>= 0.0.0)
+  compat_resource (12.19.0)
+  cop_base (0.0.12)
+    apt (>= 0.0.0)
+    cop_ntp (>= 0.0.0)
+  cop_composer (0.1.0)
+  cop_craft (0.1.6)
+    cop_base (>= 0.0.0)
+    cop_composer (>= 0.0.0)
+    cop_nginx (>= 0.0.0)
+    cop_php (>= 0.0.0)
+    cop_tls (>= 0.0.0)
+  cop_mysql (0.7.4)
+    database (>= 0.0.0)
+  cop_nginx (0.4.7)
+  cop_ntp (2.0.2)
+    cop_base (>= 0.0.0)
+  cop_php (0.6.5)
+    cop_base (>= 0.0.0)
+  cop_tls (0.2.0)
+  craft-data (0.1.0)
+    cop_mysql (>= 0.0.0)
+  database (6.1.1)
+    postgresql (>= 1.0.0)
+  mingw (2.0.1)
+    seven_zip (>= 0.0.0)
+  ohai (5.2.0)
+  openssl (7.1.0)
+  postgresql (6.1.1)
+    build-essential (>= 2.0.0)
+    compat_resource (>= 12.16.3)
+    openssl (>= 4.0)
+  seven_zip (2.0.2)
+    windows (>= 1.2.2)
+  windows (3.1.2)
+    ohai (>= 4.0.0)

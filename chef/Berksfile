@@ -1,0 +1,12 @@
+source 'https://supermarket.chef.io'
+
+#cookbook 'craft-web', path: 'cookbooks/craft-web'
+cookbook 'craft-data', path: 'cookbooks/craft-data'
+cookbook 'cop_base', tag: '0.0.12', git: 'git@github.com:copious-cookbooks/base.git'
+cookbook 'cop_ntp', tag: '2.0.2', git: 'git@github.com:copious-cookbooks/ntp.git'
+cookbook 'cop_mysql', tag: '0.7.4', git: 'git@github.com:copious-cookbooks/mysql.git'
+cookbook 'cop_php', tag: '0.6.5', git: 'git@github.com:copious-cookbooks/php.git'
+cookbook 'cop_nginx', tag: '0.4.7', git: 'git@github.com:copious-cookbooks/nginx.git'
+cookbook 'cop_composer', tag: '0.1.0', git: 'git@github.com:copious-cookbooks/composer.git'
+cookbook 'cop_craft', tag: '0.1.6', git: 'git@github.com:copious-cookbooks/craft.git'
+cookbook 'cop_tls', tag: '0.2.0', github: 'copious-cookbooks/tls'

@@ -1,0 +1,43 @@
+<!-- HEADER -->
+<header>
+    <!-- LOGO -->
+    <div class="page-header visible-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h1><a href="{{ url('') }}" title="GolfPOD">GolfPOD<img src="{{ siteUrl}}/images/golfball.png" alt="GolfPOD" class="logo-ball"/></a></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END LOGO -->
+
+    <!-- NAVBAR -->
+    {% set nav = [
+        { title: "Home", url: "" },
+        { title: "Games", url: "games" },
+        { title: "Blog", url: "news" },
+        { title: "About", url: "about" }
+    ] %}
+    <div class="navbar-wrapper">
+      <div class="container-fluid">
+            <div class="navbar navbar-success" role="navigation">
+              <div class="container">
+                    <div class="row">
+                        <div class="navbar-collapse">
+                          <ul class="nav">
+                              {% for item in nav %}
+                              <li class="nav-item">
+                                  <a href="{{ url(item.url) }}" class="nav-link">{{ item.title }}</a>
+                              </li>
+                              {% endfor %}
+                          </ul>
+                        </div>
+                    </div>
+              </div>
+            </div>
+      </div>
+    </div>
+    <!-- END NAVBAR -->
+</header>
+<!-- END HEADER -->

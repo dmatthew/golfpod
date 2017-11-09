@@ -1,0 +1,36 @@
+{% extends "_layout" %}
+
+{% set blocks = entry.articleBody.all() %}
+
+{% block content %}
+    <!-- TITLE JUMBOTRON -->
+    <div id="about-jumbotron" class="jumbotron jumbotron-lg">
+        <h1>{{ entry.title }}</h1>
+    </div>
+    <!-- END TITLE JUMBOTRON -->
+
+    <div class="container marketing">
+    {% for i, block in blocks %}
+        {% switch block.type.handle %}
+            {% case 'paragraph' %}
+                {% if block.paragraphHeading %}
+                    <h3>{{ block.paragraphHeading }}</h3>
+                {% endif %}
+                {{ block.paragraph }}
+
+            {% case 'sectionHeading' %}
+                <h2 class="section-heading">{{ block.sectionHeading }}</h2>
+
+            {% case 'featuretteHeading' %}
+                <h2 class="featurette-heading">{{ block.featuretteHeading }}{% if block.featuretteSubheading %} <small class="text-muted">{{ block.featuretteSubheading }}</small>{% endif %}</h2>
+            {% case 'image' %}
+
+            {% case 'divider' %}
+                <hr class="featurette-divider">
+
+            {% case 'image' %}
+                <img src="{{ siteUrl }}/{{ block.image }}" class="featurette-image img-fluid" alt="image">
+        {% endswitch %}
+    {% endfor %}
+    </div>
+{% endblock %}

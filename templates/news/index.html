@@ -1,0 +1,33 @@
+{% extends "_layout" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="blog-header">
+                <h1 style="font-size: 48px; margin-bottom: 0px; font-weight: 600;" class="blog-title">News and Features</h1>
+                <p class="lead blog-description">Stories and thoughts on golf</p>
+            </div>
+            <div class="col-md-12 blog-main">
+            {% for entry in craft.entries.section('news').all() %}
+                <div class="row blog-row">
+                    <div class="col-md-3">
+                        <img class="img-fluid" alt="" src="images/stock01.jpg">
+                    </div>
+                    <div class="col-md-9">
+                        <h2><a href="{{ url(entry.url) }}" >{{ entry.title }}</a></h2>
+                        <p class="post-date">{{ entry.postDate | date('M d, Y') }}</p>
+                        {#<p>{{ post.excerpt }}</p>#}
+                        <p><a class="read-more" href="{{ url(entry.url) }}">read more &#8680;</a></p>
+                    </div>
+                </div>
+            {% endfor %}
+
+                <!-- PAGINATION -->
+                <div class="pagination-center">
+                    {#{{ $posts->links() }}#}
+                </div>
+                <!-- END PAGINATION -->
+            </div>
+        </div>
+    </div>
+{% endblock %}
