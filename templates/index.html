@@ -54,16 +54,16 @@
             {% for entry in craft.entries.section('news').limit(3).all() %}
                 <div class="col-md-6 col-lg-4 post">
                     <div class="thumbnail">
-                        <a href="#">
+                        <a href="{{ entry.url }}">
                             <img src="images/stock01.jpg" class="img-fluid" alt="" title="" />
                         </a>
                         <div class="caption">
                             <p class="post-date">
                             {{ entry.postDate | date('M d, Y') }}
                             </p>
-                            <h3><a href="#">{{ entry.title }}</a></h3>
+                            <h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
                             {#<p>{{ entry.excerpt }}</p>#}
-                            <a class="read-more" href="#">read more &#8680;</a>
+                            <a class="read-more" href="{{ entry.url }}">read more &#8680;</a>
                         </div>
                     </div>
                 </div><!-- /.col-md-4 -->
