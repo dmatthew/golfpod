@@ -19,6 +19,8 @@
 
 {% extends "_layout" %}
 {% set pod = craft.entries.id(craft.entries.section('games').limit(1).ids()).one() %}
+{% set twitterUsername = craft.craftTwitter.twitterUsername %}
+{% set twitterUserTitle = craft.craftTwitter.twitterUserTitle %}
 
 {% block content %}
     <!-- PRACTICE OF THE DAY -->
@@ -74,26 +76,7 @@
         <!-- Follow Us! -->
         <div class="col-md-3">
             <h3 class="section-title margin-b-20">Follow Us!</h3>
-            <div class="thumbnail">
-                <div class="media">
-                    <a class="pull-left" href="#">
-                        <img class="media-object" src="images/stock01.jpg" alt="" style="width:64px; height:64px;">
-                    </a>
-                    <div class="media-body">
-                        <h4 class="media-heading">Media heading</h4>
-                        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper.</p>
-                    </div>
-                </div>
-                <div class="media">
-                    <a class="pull-left" href="#">
-                        <img class="media-object" src="images/stock01.jpg" alt="" style="width:64px; height:64px;">
-                    </a>
-                    <div class="media-body">
-                        <h4 class="media-heading">Media heading</h4>
-                        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus.</p>
-                    </div>
-                </div>
-            </div>
+            <a class="twitter-timeline" data-width="300" data-height="450" data-theme="light" href="https://twitter.com/{{ twitterUsername }}">Tweets by {{ twitterUserTitle }}</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div><!-- /follow us! -->
     </div>
 </div>

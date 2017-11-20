@@ -1,0 +1,17 @@
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+    label: 'Twitter Username',
+    instructions: 'Enter Twitter Username here',
+    id: 'twitterUsername',
+    name: 'twitterUsername',
+    value: settings['twitterUsername']})
+}}
+
+{{ forms.textField({
+    label: 'Twitter User Title',
+    instructions: "Enter Twitter User's Title here",
+    id: 'twitterUserTitle',
+    name: 'twitterUserTitle',
+    value: settings['twitterUserTitle']})
+}}
