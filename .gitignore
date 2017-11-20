@@ -13,7 +13,15 @@ chef/nodes/*.json
 *.crt
 *.cert
 
+node_modules/
+npm-debug.log
+mix-manifest.json
+package-lock.json
+
 .idea
 storage/logs
 storage/runtime
 storage/backups
+
+/web/images/
+/web/styles/
