@@ -1,0 +1,39 @@
+{
+    "name": "dmatthew/craft-twitter",
+    "description": "",
+    "type": "craft-plugin",
+    "version": "0.1.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "craft twitter"
+    ],
+    "license": "MIT",
+    "require": {
+        "craftcms/cms": "~3.0.0-beta.23"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+          "dmatthew\\crafttwitter\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Craft Twitter",
+        "handle": "craft-twitter",
+        "schemaVersion": "0.1.0",
+        "hasCpSettings": true,
+        "hasCpSection": false,
+        "components": {
+            "craftTwitterService": "dmatthew\\crafttwitter\\services\\CraftTwitterService"
+        },
+        "class": "dmatthew\\crafttwitter\\CraftTwitterPlugin"
+    }
+}
