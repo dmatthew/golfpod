@@ -1,0 +1,63 @@
+/* Navbar */
+.navbar-wrapper {
+    background: none repeat scroll 0% 0% #50BE46;
+}
+.navbar-wrapper .container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.navbar {
+    border: none;
+    margin-bottom: 0px;
+}
+.navbar-collapse {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.navbar-toggle {
+    background-color: #007700;
+    padding: 10px 18px;
+    margin: 0px -15px 0px 0px;
+    border-radius: 0px;
+}
+.navbar-toggle .glyphicon {
+    color: #fff;
+    font-size: 24px;
+}
+.navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+.navbar-brand:hover, .navbar-brand:focus {
+    color: #fff;
+}
+.nav > li {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.navbar-success .active > a {
+    background-color: transparent;
+    color: #333;
+}
+.navbar-success .active > a:hover {
+    background-color: transparent;
+}
+.navbar-success li > a {
+    color: #fff;
+}
+.navbar-success li > a:hover {
+    background-color: #007700;
+    color: #fff;
+    text-decoration: underline;
+}
+.navbar-success .dropdown:hover {
+    background-color: #007700;
+    color: #000;
+}
+ul.nav li.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.dropdown-menu li a:hover {
+    background-color: rgb(80, 190, 70);
+}

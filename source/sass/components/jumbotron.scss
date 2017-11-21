@@ -1,0 +1,29 @@
+/* General Jumbotron Styles */
+.jumbotron {
+    background-image: url(../images/course-gray.jpg);
+    background-size: cover;
+}
+.jumbotron-sm {
+    padding: 20px 0px;
+}
+.jumbotron-lg {
+    padding: 150px 0px;
+}
+
+@media (min-width: 768px) {
+    .jumbotron-sm {
+        padding: 30px 0px;
+    }
+}
+
+@media (min-width: 992px) {
+    .jumbotron-sm {
+        padding: 40px 0px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .jumbotron-sm {
+        padding: 50px 0px;
+    }
+}

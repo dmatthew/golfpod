@@ -1,0 +1,110 @@
+/* General styles */
+body {
+    color: #5A5A5A;
+    font-family: "Open Sans", arial, sans-serif;
+}
+.main {
+    margin-top: 20px;
+}
+li {
+    list-style-type: none;
+}
+a {
+    color: #666;
+}
+a:hover, a:focus {
+    text-decoration: none;
+}
+p > a, a:hover {
+    color: rgb(80, 190, 70);
+}
+.margin-b-20 {
+    margin-bottom: 20px;
+}
+.margin-t-20 {
+    margin-top: 20px;
+}
+.message {
+    color: #f00;
+}
+.btn-primary {
+    background-color: #515A69;
+    border-color: #444C5A;
+}
+.btn-success {
+    background-color: #50BE46;
+    border-color: #47AB3E;
+}
+.text-primary {
+   color: #515A69;
+}
+.text-success {
+    color: #50BE46;
+}
+.navbar-primary {
+   background-color: #515A69;
+}
+.navbar-success {
+    background-color: #50BE46;
+}
+.btn-submit {
+    background-color: rgb(80, 190, 70);
+    color: #fff;
+}
+.btn-submit:hover {
+    background-color: #515a69;
+    color: #fff;
+}
+.marketing .col-lg-4 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+hr {
+    border-width: 4px;
+}
+.featurette-divider {
+    margin: 40px 0px;
+}
+
+/* Social Buttons */
+.btn-social {
+    border-radius: 50px;
+    display: inline-block;
+}
+.btn-social .fa {
+    border-radius: 50%;
+    color: white;
+    display: inline-block;
+    font-size: 26px;
+    padding-top: 7px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+}
+.btn-facebook {
+    background-color: #3b5998;
+}
+.btn-twitter {
+    background-color: #2ba9e1;
+}
+.btn-google-plus {
+    background-color: #dd4b39;
+}
+
+@media (min-width: 768px) {
+    .featurette-divider {
+        margin: 50px 0px;
+    }
+}
+
+@media (min-width: 992px) {
+    .featurette-divider {
+        margin: 60px 0px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .featurette-divider {
+        margin: 80px 0px;
+    }
+}

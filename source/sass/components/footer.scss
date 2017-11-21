@@ -1,0 +1,18 @@
+/* Footer */
+.footer {
+    background-color: #515a69;
+    box-shadow: 0px 2px 5px #bbb inset;
+    padding: 20px 0 10px;
+}
+.footer h2 > a {
+    color: rgb(80, 190, 70);
+}
+.footer h3, .footer a, .footer p {
+    color: #fff;
+}
+.footer h2 > a:hover {
+    text-decoration: underline;
+}
+.footer a:hover {
+    color: rgb(80, 190, 70);
+}

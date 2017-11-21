@@ -1,0 +1,38 @@
+/* News and Features Pages */
+.blog-header {
+    margin-top: 20px;
+}
+.blog-main {
+    font-size: 16px;
+    line-height: 1.65;
+}
+.blog-post-title {
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.blog-description {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+.blog-img {
+    margin: 20px 0px;
+}
+.blog-date {
+    color: #999;
+}
+.blog-row {
+    border-bottom: 4px solid #eee;
+    padding: 32px 0px 12px;
+}
+.blog-row:last-child {
+        border-bottom: none;
+}
+.blog-row h2 {
+    margin: 0px 0px 5px;
+}
+.blog-row p {
+    font-size: 14px;
+    line-height: 1.5;
+}
