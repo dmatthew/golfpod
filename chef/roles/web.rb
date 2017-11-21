@@ -14,5 +14,6 @@ run_list(
     'recipe[cop_composer]',
     'recipe[cop_nginx::default]',
     'recipe[cop_mysql::install_client]',
-    'recipe[cop_craft::default]'
+    'recipe[cop_craft::default]',
+    'recipe[craft-web::nvm]'
 )
