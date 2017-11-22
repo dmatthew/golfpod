@@ -50,10 +50,10 @@
     <div class="container">
         <div class="row">
     	{% for entry in craft.entries.section('games').all() %}
-            <div class="col-md-6 col-lg-3 post">
+            <div class="col-md-6 col-lg-3 games-grid-entry">
                 <div class="thumbnail">
         			<a href="{{ entry.url }}">
-                        <!--<img src="" alt="{{ entry.title }}" class="img-fluid">-->
+                        <img src="{{ url('images/stock01.jpg') }}" alt="{{ entry.title }}" class="img-fluid">
                         <h2>{{ entry.title }}</h2>
                         <p class="category-flag">{{ entry.gameCategory.one() }}</p>
                     </a>
