@@ -12,6 +12,7 @@
 
 {% extends "_layout" %}
 {% set title = "Games" %}
+{% set games = (category is defined) ? craft.entries.section('games').relatedTo(category).all() : craft.entries.section('games').all() %}
 
 {% block content %}
     <!-- GAMES JUMBOTRON -->
@@ -49,7 +50,7 @@
     <!-- GAMES GALLERY -->
     <div class="container">
         <div class="row">
-    	{% for entry in craft.entries.section('games').all() %}
+    	{% for entry in games %}
             <div class="col-md-6 col-lg-3 games-grid-entry">
                 <div class="thumbnail">
         			<a href="{{ entry.url }}">
